@@ -1,0 +1,20 @@
+/*COLORS*/
+@use './colors'as colors;
+
+@media (min-width: 375px) {
+
+    /*HEADER*/
+    .header {
+        &__title {
+            font-size: 4.5rem;
+        }
+
+        &__text {
+            font-size: 1.4rem;
+        }
+
+        &__btn {
+            font-size: 1.5rem;
+        }
+    }
+}
