@@ -2,23 +2,10 @@
 @use './colors'as colors;
 
 @media (min-width: 1200px) {
-    /*NAV DESKTOP*/ 
+
+    /*NAV DESKTOP*/
     .nav-desktop {
         a {
-            font-size: 2rem;
-        }
-    }
-      /*HEADER*/
-      .header {
-        &__title {
-            font-size: 10.5rem;
-        }
-
-        &__text {
-            font-size: 1.9rem;
-        }
-
-        &__btn {
             font-size: 2rem;
         }
     }

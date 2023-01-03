@@ -43,39 +43,44 @@
     .header {
         @include heroImages('/src/img/header/header_big.jpg');
 
-        &__box {}
+        &__btn {
+            position: unset;
+        }
+    }
 
+    /*ABOUT ME*/
+    .about-me {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
 
-        &__title {
-            font-size: 6rem;
+        &__left {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        &__right {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         &__text {
-           
+            padding: 1em 0;
         }
 
         &__btn {
-            position:unset;
+            position: unset;
         }
-
     }
 }
 
 @media (min-width: 768px) {
-    /*NAV DESKTOP*/ 
+
+    /*NAV DESKTOP*/
     .nav-desktop {
         padding: 0.5em 1em;
-    }
-
-    /*HEADER*/
-    .header {
-        &__title {
-            font-size: 5.5rem;
-        }
-
-        &__text {
-            font-size: 1.5rem;
-        }
     }
 }
 
@@ -85,12 +90,5 @@
     .nav-desktop {
         font-size: 2rem;
         padding: 0.7em 1em;
-    }
-
-    /*HEADER*/
-    .header {
-        &__title {
-            font-size: 6.5rem;
-        }
     }
 }
