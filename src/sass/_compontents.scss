@@ -13,7 +13,6 @@
     color: colors.$blue-main;
     text-decoration: none;
     background-color: transparent;
-    backdrop-filter: blur(10px);
     border: 1px solid colors.$blue-main;
     padding: 0.5em 0.8em;
     border-radius: 3px;
@@ -79,8 +78,9 @@
     }
 
     .hero-gradient {
-        margin-top: -40px;
+        margin: -40px 0;
         max-width: 270px;
+        height: 500px;
     }
 }
 
@@ -103,6 +103,11 @@
     .title {
         font-size: 8rem;
     }
+
+    .hero-gradient {
+        max-width: 400px;
+        height: 600px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -111,10 +116,14 @@
     }
 
     .text {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
     }
 
     .button {
         font-size: 2rem;
+    }
+
+    .hero-gradient {
+        margin-right: 100px;
     }
 }

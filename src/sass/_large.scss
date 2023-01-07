@@ -9,4 +9,12 @@
             font-size: 2rem;
         }
     }
+
+       /*ARTICLES*/
+       .articles {
+        &__square {
+            margin: 0 30px;
+            width: 70px;
+        }
+    }
 }
