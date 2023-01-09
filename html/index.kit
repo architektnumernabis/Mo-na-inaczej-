@@ -17,7 +17,8 @@
 </head>
 
 <body>
-    <!-- @include 'nav.kit' -->
+    <!-- @include 'nav-mobile.kit' -->
+    <!-- @include 'nav-desktop.kit' -->
     <header class="header">
         <div class="header__box wrapper">
             <h1 class="header__title title">można inaczej!</h1>
@@ -47,7 +48,7 @@
             </div>
             <div class="about-me__left">
                 <div class="hero-gradient">
-                    <img src="../src/img/about-me/about-me.png"
+                    <img class="image" src="../src/img/about-me/about-me.png"
                         alt="Zdjęcie przedstawia Macieja Pawlicę, założyciela strony Można inaczej">
                 </div>
             </div>
@@ -89,12 +90,26 @@
 
         <!--CONTACT-->
         <section class="contact wrapper" id="contact">
-
+            <div class="contact__left">
+                <h2 class="contact__title title">kontakt</h2>
+                <p class="contact__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel
+                    nihil hic quis. Ad error eligendi sapiente, itaque sunt nisi.</p>
+                <div class="contact__icons">
+                    <a class="special-icon" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact__right">
+                <div class="hero-gradient">
+                    <img class="image" src="../src/img/contact/contact.jpeg"
+                        alt="Zdjęcie przedstawia sieć połączeń neuronalnych">
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <br><br><br><br><br>
     <!-- @include 'footer.kit' -->
 
     <script src="../dist/js/main.min.js"></script>

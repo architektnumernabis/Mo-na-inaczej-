@@ -13,18 +13,32 @@
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/74154c4e60.js" crossorigin="anonymous"></script>
     <!--MY STYLES-->
-    <link rel="stylesheet" href="/dist/css/main.min.css"></head>
+    <link rel="stylesheet" href="/dist/css/hamburgers.min.css">
+<link rel="stylesheet" href="/dist/css/main.min.css"></head>
 
 <body>
-    <nav class="nav-desktop">
+    <nav class="nav-mobile">
+    <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="nav-mobile__items">
+        <a href="#" class="nav-mobile__item">home</a>
+        <a href="#about-me" class="nav-mobile__item">o mnie</a>
+        <a href="#articles" class="nav-mobile__item">wpisy</a>
+        <a href="#contact" class="nav-mobile__item">kontakt</a>
+    </div>
+</nav>    <nav class="nav-desktop">
     <div class="nav-desktop__box">
         <a href="#">home</a>
         <a href="#about-me">o mnie</a>
         <a href="#articles">wpisy</a>
-        <a href="page.html">kontakt</a>
-        
+        <a href="#contact">kontakt</a>
     </div>
-    <a class="na-desktop__search-bar"><img src="../src/img/header/search.svg" alt=""></a>
+    <a href="#" class="nav-desktop__logo">
+         <i class="fa-brands fa-pied-piper-alt"></i>
+    </a>
 </nav>    <header class="header">
         <div class="header__box wrapper">
             <h1 class="header__title title">można inaczej!</h1>
@@ -54,7 +68,7 @@
             </div>
             <div class="about-me__left">
                 <div class="hero-gradient">
-                    <img src="../src/img/about-me/about-me.png"
+                    <img class="image" src="../src/img/about-me/about-me.png"
                         alt="Zdjęcie przedstawia Macieja Pawlicę, założyciela strony Można inaczej">
                 </div>
             </div>
@@ -96,14 +110,42 @@
 
         <!--CONTACT-->
         <section class="contact wrapper" id="contact">
-
+            <div class="contact__left">
+                <h2 class="contact__title title">kontakt</h2>
+                <p class="contact__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel
+                    nihil hic quis. Ad error eligendi sapiente, itaque sunt nisi.</p>
+                <div class="contact__icons">
+                    <a class="special-icon" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact__right">
+                <div class="hero-gradient">
+                    <img class="image" src="../src/img/contact/contact.jpeg"
+                        alt="Zdjęcie przedstawia sieć połączeń neuronalnych">
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <br><br><br><br><br>
-    <footer>
-    <p></p>
+    <footer class="footer">
+    <div class="footer__box wrapper">
+        <div class="footer__links">
+            <a href="#" class="footer__link">home</a>
+            <a href="#about-me" class="footer__link">o mnie</a>
+            <a href="#articles" class="footer__link">wpisy</a>
+            <a href="#contact" class="footer__link">kontakt</a>
+        </div>
+        <div class="footer__logo">
+            <i class="fa-brands fa-pied-piper-alt"></i>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <p class="footer__text">Można Inaczej &copy; <span class="footer__year"></span> designed by Maciej Pawlica
+        </p>
+    </div>
 </footer>
     <script src="../dist/js/main.min.js"></script>
 

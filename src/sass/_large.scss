@@ -1,6 +1,9 @@
 /*COLORS*/
 @use './colors'as colors;
 
+/*MIXINS*/
+@import './mixins';
+
 @media (min-width: 1200px) {
 
     /*NAV DESKTOP*/
@@ -10,11 +13,41 @@
         }
     }
 
-       /*ARTICLES*/
-       .articles {
+    /*ABOUT-ME*/
+    .about-me {
+        &__right {
+            padding: 0;
+        }
+    }
+
+    /*ARTICLES*/
+    .articles {
         &__square {
             margin: 0 30px;
             width: 70px;
+        }
+    }
+
+    /*CONTACT*/
+    .contact {
+        &__left {
+            padding: 0;
+        }
+
+        &__right {
+            .hero-gradient {
+                margin-left: 100px;
+                margin-right: 0;
+            }
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__link {
+            &:first-child {
+                padding-left: 0;
+            }
         }
     }
 }

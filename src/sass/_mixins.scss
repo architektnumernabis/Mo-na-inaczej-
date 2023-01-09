@@ -1,5 +1,5 @@
-/*COLORS*/ 
-@use './colors' as colors;
+/*COLORS*/
+@use './colors'as colors;
 
 @mixin heroImages($bgImg) {
     background-image: colors.$blue-gradient, url($bgImg);
@@ -23,3 +23,43 @@
     font-size: 5rem;
     color: $color;
 }
+
+@mixin aboutMeContact {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    color: colors.$blue-main;
+}
+
+@mixin aboutMeContactFirstChild {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+@mixin aboutMeContactSecondChild {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+}
+
+@mixin aboutMeContactText {
+    text-align: center;
+    padding: 1em;
+}
+
+@mixin aboutMeContactMedium {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+}
+
+@mixin aboutMeContactMediumFirstChild {
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+

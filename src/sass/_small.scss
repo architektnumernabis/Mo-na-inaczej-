@@ -1,6 +1,30 @@
 /*COLORS*/
 @use './colors'as colors;
 
+/*MIXINS*/
+@import './mixins';
+
 @media (min-width: 375px) {
 
+    /*CONTACT*/
+    .contact {
+        &__icons {
+            font-size: 4rem;
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__link {
+            padding: 1em;
+        }
+
+        &__logo {
+            font-size: 7rem;
+        }
+
+        &__text {
+            font-size: 1.2rem;
+        }
+    }
 }

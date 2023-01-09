@@ -21,6 +21,47 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.body-no-scroll {
+    overflow-y: hidden;
+}
+
+.shadow-bg {
+    background-color: colors.$shadowNav;
+}
+
+/*NAV-MOBILE*/
+.nav-mobile {
+    position: fixed;
+    width: 100vw;
+    height: 56px;
+    z-index: 100;
+
+    &__items {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        transform: translateX(102%);
+        transition: transform .3s;
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        text-decoration: none;
+        color: colors.$black;
+        padding: 1em;
+        font-size: 3rem;
+    }
+}
+
 /*NAV DESKTOP*/
 .nav-desktop {
     display: none;
@@ -83,37 +124,26 @@ body {
     }
 }
 
+/*MAIN*/
+main {
+    background-image: url('../img/Sprinkle.svg');
+
+}
+
 /*ABOUT ME*/
 .about-me {
-    display: flex;
-    flex-direction: column;
+    @include aboutMeContact;
 
     &__left {
-        display: flex;
-        justify-content: center;
-        padding: 1em;
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-bottom: 10px solid colors.$blue-main;
-            object-fit: cover;
-        }
+        @include aboutMeContactFirstChild;
     }
 
     &__right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5em;
-    }
-
-    &__title {
-        color: colors.$blue-main;
+        @include aboutMeContactSecondChild;
     }
 
     &__text {
-        padding: 1em;
+        @include aboutMeContactText;
     }
 }
 
@@ -213,11 +243,98 @@ body {
     }
 }
 
-/*CONTACT*/ 
+/*CONTACT*/
 .contact {
-    
+    @include aboutMeContact;
+
+    &__right {
+        display: none;
+    }
+
+    &__left {
+        @include aboutMeContactSecondChild;
+    }
+
+    &__text {
+        @include aboutMeContactText;
+    }
+
+    &__icons {
+        padding: 0.5em 0;
+        font-size: 3.5rem;
+
+        a {
+            color: colors.$blue-main;
+            padding: 0.5em;
+
+            i {
+                transition: transform .3s;
+            }
+
+            &:hover>i {
+                transform: scale(1.2)
+            }
+        }
+    }
 }
 
+/*FOOTER*/
+.footer {
+    background: colors.$footerShadow;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 4fr 1fr;
+        background: colors.$footerShadow;
+        overflow: hidden;
+        color: colors.$white;
+    }
+
+    &__links {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        padding: 0.5em;
+        color: colors.$white;
+        font-size: 1.7rem;
+        transition: color .3s;
+
+        &:hover {
+            color: colors.$blue-main;
+        }
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 5rem;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-column: -1/1;
+        grid-row: 2/3;
+        background-color: colors.$black;
+    }
+
+    &__text {
+        padding: 0.7em;
+        color: colors.$grey-header;
+        text-align: center;
+    }
+}
 
 /*BREAKPOINTS*/
 @import './small';

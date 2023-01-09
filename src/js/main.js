@@ -4,6 +4,12 @@ const prev = document.querySelector('.left')
 const carousel = document.querySelector('.articles__carousel')
 const squares = document.querySelectorAll('.articles__square')
 let sectionIndex = 0
+//VARIABLE FOR FOOTER YEAR
+const footerYear = document.querySelector('.footer__year')
+//VARIABLES FOR MOBILE NAVIGATION 
+const navBtn = document.querySelector('.hamburger')
+const navMobile = document.querySelector('.nav-mobile__items')
+const navMobileItems = document.querySelectorAll('.nav-mobile__item')
 
 //FUNCTIONS FOR HANDLING CAROUSEL IN ARTICLES SECTION 
 const reset = () => {
@@ -64,3 +70,44 @@ let startCarousel = setInterval(handleNextButton, 4000)
 
 next.addEventListener('click', handleNextButton)
 prev.addEventListener('click', handlePrevButton)
+
+//FUNCTION THAT CHANGES FOOTER YEAR
+const changeFooterYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+
+changeFooterYear();
+
+//FUNCTION THAT CHANGES NAV-DESKTOP BACKGROUND COLOR AFTER SCROLLING
+document.addEventListener('DOMContentLoaded', function () {
+
+    const nav = document.querySelector('.nav-desktop')
+
+    function addShadow() {
+        if (window.scrollY >= 200) {
+            nav.classList.add('shadow-bg')
+        } else {
+            nav.classList.remove('shadow-bg')
+        }
+    }
+
+    window.addEventListener('scroll', addShadow)
+})
+
+//FUNCTION THAT HANDLES MOBILE NAVIGATION 
+const handleMobileNav = () => {
+    navBtn.classList.toggle('is-active')
+    navMobile.classList.toggle('nav-mobile__items--active')
+    document.body.classList.toggle('body-no-scroll')
+
+    navMobileItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navBtn.classList.remove('is-active')
+            navMobile.classList.remove('nav-mobile__items--active')
+            document.body.classList.remove('body-no-scroll')
+        })
+    })
+}
+
+navBtn.addEventListener('click', handleMobileNav)

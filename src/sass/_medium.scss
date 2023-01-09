@@ -1,19 +1,27 @@
 /*COLORS*/
 @use './colors'as colors;
 
+/*MIXINS*/
+@import './mixins';
+
 @media (min-width: 576px) {
+
+    /*NAV-MOBILE*/
+    .nav-mobile {
+        display: none;
+    }
 
     /*NAV DESKTOP*/
     .nav-desktop {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        padding: 0.5em 0.5em 0.5em 0.5em;
+        padding: 0.5em;
         position: fixed;
-        background: transparent;
         font-size: 1.6rem;
         letter-spacing: 1px;
-        z-index: 10;
+        transition: background-color .3s;
+        z-index: 100;
 
         a {
             font-size: 1.8rem;
@@ -21,6 +29,7 @@
             text-decoration: none;
             padding: 10px;
             transition: color .3s;
+            align-self: center;
             cursor: pointer;
 
             &:hover {
@@ -32,10 +41,15 @@
             display: flex;
         }
 
-        &__search-bar {
+        &__logo {
             display: flex;
             justify-content: flex-end;
             padding: 10px;
+
+            i {
+                font-size: 3rem;
+                color: colors.$blue-main;
+            }
         }
     }
 
@@ -50,13 +64,11 @@
 
     /*ABOUT ME*/
     .about-me {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
+        @include aboutMeContactMedium;
 
         &__left {
-            grid-column: 1/2;
-            grid-row: 1/2;
+            @include aboutMeContactMediumFirstChild;
+            padding: 0.5em;
         }
 
         &__right {
@@ -64,10 +76,12 @@
             grid-row: 1/2;
             justify-content: center;
             align-items: flex-start;
+            padding: 1em;
         }
 
         &__text {
             padding: 0 0 1em 0;
+            text-align: left;
         }
 
         &__btn {
@@ -119,15 +133,46 @@
         }
     }
 
+    /*CONTACT*/
+    .contact {
+        @include aboutMeContactMedium;
 
+        &__left {
+            @include aboutMeContactMediumFirstChild;
+            align-items: flex-start;
+            padding: 1em;
+        }
 
+        &__text {
+            padding: 0 0 1em 0;
+            text-align: left;
+        }
+
+        &__icons {
+            .special-icon {
+                padding-left: 0;
+            }
+        }
+
+        &__right {
+            @include aboutMeContactFirstChild;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }
 }
 
 @media (min-width: 768px) {
 
     /*NAV DESKTOP*/
     .nav-desktop {
-        padding: 0.5em 1em;
+        padding: 0 1em;
+
+        &__logo {
+            i {
+                font-size: 4rem;
+            }
+        }
     }
 
     /*ARTICLES*/
@@ -136,6 +181,31 @@
             width: 60px;
         }
     }
+
+    /*CONTACT*/
+    .contact {
+        &__icons {
+            font-size: 5rem;
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__links {
+            display: flex;
+        }
+
+        &__link {
+            &:first-child {
+                padding-left: 0.5em;
+            }
+        }
+
+        &__logo {
+            margin-top: 40px;
+        }
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -143,6 +213,19 @@
     /*NAV DESKTOP*/
     .nav-desktop {
         font-size: 2rem;
-        padding: 0.7em 1em;
+    }
+
+    /*CONTACT*/
+    .contact {
+        &__icons {
+            font-size: 6rem;
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__link {
+            font-size: 2rem;
+        }
     }
 }
