@@ -55,7 +55,7 @@
 
     /*HEADER*/
     .header {
-        @include heroImages('/src/img/header/header_big.jpg');
+        @include heroImages('../../src/img/header/header_big.jpg');
 
         &__btn {
             position: unset;
@@ -94,15 +94,15 @@
     .articles {
 
         .first {
-            @include heroImages('/src/img/articles/articles_01-big.png');
+            @include heroImages('../../src/img/articles/articles_01-big.png');
         }
 
         .second {
-            @include heroImages('/src/img/articles/articles_02-big.png');
+            @include heroImages('../../src/img/articles/articles_02-big.png');
         }
 
         .third {
-            @include heroImages('/src/img/articles/articles_03-big.png');
+            @include heroImages('../../src/img/articles/articles_03-big.png');
         }
 
         &__controls {

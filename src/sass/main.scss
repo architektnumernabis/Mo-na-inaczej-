@@ -71,7 +71,7 @@ body {
 .header {
     height: 100vh;
     color: colors.$white;
-    @include heroImages('/src/img/header/header_mini.jpg');
+    @include heroImages('../../src/img/header/header_mini.jpg');
 
     &__box {
         display: flex;
@@ -205,15 +205,15 @@ main {
     }
 
     .first {
-        @include heroImages('/src/img/articles/articles_01-small.png');
+        @include heroImages('../../src/img/articles/articles_01-small.png');
     }
 
     .second {
-        @include heroImages('/src/img/articles/articles_02-small.png');
+        @include heroImages('../../src/img/articles/articles_02-small.png');
     }
 
     .third {
-        @include heroImages('/src/img/articles/articles_03-small.png');
+        @include heroImages('../../src/img/articles/articles_03-small.png');
     }
 
     &__controls {
