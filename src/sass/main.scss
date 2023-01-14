@@ -98,7 +98,7 @@ body {
         max-width: 500px;
         margin: 0 auto;
         text-align: center;
-        padding-bottom: 2em;
+        padding: 0 1em 2em 1em;
         color: colors.$grey-header;
     }
 
@@ -151,6 +151,7 @@ main {
 .articles {
     position: relative;
     height: 70vh;
+    background-color: colors.$white;
 
     &__carousel {
         position: relative;
@@ -285,7 +286,6 @@ main {
     &__box {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 4fr 1fr;
         background: colors.$footerShadow;
         overflow: hidden;
         color: colors.$white;

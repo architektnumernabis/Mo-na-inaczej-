@@ -191,6 +191,11 @@
 
     /*FOOTER*/
     .footer {
+
+        &__box {
+            grid-template-rows: 4fr 1fr;
+        }
+
         &__links {
             display: flex;
         }
