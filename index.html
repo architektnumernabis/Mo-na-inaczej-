@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="./dist/css/hamburgers.min.css">
 <link rel="stylesheet" href="./dist/css/main.min.css"></head>
 
-<body>
+<body class="main-page">
+
+    <!--NAVIGATION-->
     <nav class="nav-mobile">
     <button class="hamburger hamburger--spin" type="button">
         <span class="hamburger-box">
@@ -24,22 +26,24 @@
         </span>
     </button>
     <div class="nav-mobile__items">
-        <a href="#" class="nav-mobile__item">home</a>
-        <a href="#about-me" class="nav-mobile__item">o mnie</a>
-        <a href="#articles" class="nav-mobile__item">wpisy</a>
-        <a href="#contact" class="nav-mobile__item">kontakt</a>
+        <a href="../index.html#home" class="nav-mobile__item">home</a>
+        <a href="../index.html#about-me" class="nav-mobile__item">o mnie</a>
+        <a href="../allposts.html" class="nav-mobile__item">wpisy</a>
+        <a href="../index.html#contact" class="nav-mobile__item">kontakt</a>
     </div>
 </nav>    <nav class="nav-desktop">
     <div class="nav-desktop__box">
-        <a href="#">home</a>
-        <a href="#about-me">o mnie</a>
-        <a href="#articles">wpisy</a>
-        <a href="#contact">kontakt</a>
+        <a href="../index.html#home" class="nav-desktop__item ">home</a>
+        <a href="../index.html#about-me" class="nav-desktop__item">o mnie</a>
+        <a href="../allposts.html" class="nav-desktop__item">wpisy</a>
+        <a href="../index.html#contact" class="nav-desktop__item">kontakt</a>
     </div>
     <a href="#" class="nav-desktop__logo">
          <i class="fa-brands fa-pied-piper-alt"></i>
     </a>
-</nav>    <header class="header">
+</nav>
+    <!--HEADER-->
+    <header class="header section" id="home">
         <div class="header__box wrapper">
             <h1 class="header__title title">można inaczej!</h1>
             <p class="header__text text">witam na stronie, na której prezentuję moje podejście do nauczania matematyki,
@@ -55,7 +59,7 @@
     <!--MAIN-->
     <main>
         <!--ABOUT ME-->
-        <section class="about-me wrapper" id="about-me">
+        <section class="about-me wrapper section" id="about-me">
             <div class="about-me__right">
                 <h2 class="about-me__title title">o mnie</h2>
                 <p class="about-me__text text">Jestem młodym, początkującym nauczycielem, który pragnie podzielić się z
@@ -78,25 +82,19 @@
         <section class="articles" id="articles">
             <div class="articles__carousel">
                 <div class="articles__carousel-item first">
-                    <h2 class="articles__title title">artykuł1</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">wartość bezwzględna</h2>
+                    <p class="articles__info text">W tym poście przedstawiam pomysł na lekcję wprowadzającą własności wartości bezwzględnej w drugiej klasie liceum.</p>
+                    <div class="articles__btn "><a class="button" href="../absolute.html">więcej</a></div>
                 </div>
                 <div class="articles__carousel-item second">
-                    <h2 class="articles__title title">artykuł2</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">pojęcie funkcji</h2>
+                    <p class="articles__info text">W tym poście prezentuję w jaki sposób wprowadzam pojęcie funkcji w pierwszej klasie liceum.</p>
+                    <div class="articles__btn "><a class="button" href="../function.html">więcej</a></div>
                 </div>
                 <div class="articles__carousel-item third">
-                    <h2 class="articles__title title">artykuł3</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">odkrywanie dowodów</h2>
+                    <p class="articles__info text">Lekcja poświęcona na odkrywanie w jaki sposób można udowodnić własności wartości bezwzględnej.</p>
+                    <div class="articles__btn "><a class="button" href="../proofs.html">więcej</a></div>
                 </div>
             </div>
             <div class="articles__controls">
@@ -109,11 +107,10 @@
         </section>
 
         <!--CONTACT-->
-        <section class="contact wrapper" id="contact">
+        <section class="contact wrapper section" id="contact">
             <div class="contact__left">
                 <h2 class="contact__title title">kontakt</h2>
-                <p class="contact__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel
-                    nihil hic quis. Ad error eligendi sapiente, itaque sunt nisi.</p>
+                <p class="contact__text text">Jeżeli masz jakiś pomysł na lekcję, którym chcesz się podzielić lub chcesz skomentować przeczytane na tej stronie wpisy to serdecznie zapraszam do kontaktu!</p>
                 <div class="contact__icons">
                     <a class="special-icon" href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -122,33 +119,39 @@
             </div>
             <div class="contact__right">
                 <div class="hero-gradient">
-                    <img class="image" src="./src/img/contact/contact.jpeg"
+                    <img class="image" src="./src/img/contact/contact.jpg"
                         alt="Zdjęcie przedstawia sieć połączeń neuronalnych">
                 </div>
             </div>
         </section>
-
     </main>
 
+    <!--FOOTER-->
     <footer class="footer">
     <div class="footer__box wrapper">
         <div class="footer__links">
-            <a href="#" class="footer__link">home</a>
-            <a href="#about-me" class="footer__link">o mnie</a>
-            <a href="#articles" class="footer__link">wpisy</a>
-            <a href="#contact" class="footer__link">kontakt</a>
+            <a href="../index.html" class="footer__link">home</a>
+            <a href="../index.html#about-me" class="footer__link">o mnie</a>
+            <a href="../allposts.html" class="footer__link">wpisy</a>
+            <a href="../index.html#contact" class="footer__link">kontakt</a>
+         
         </div>
+        
         <div class="footer__logo">
-            <i class="fa-brands fa-pied-piper-alt"></i>
+           <!--  <i class="fa-brands fa-pied-piper-alt"></i>-->
+           <a class="footer__polish" href="/index.html">🇵🇱</a>
+           <a href="../eng/index.html">🇬🇧</a>
         </div>
     </div>
+
     <div class="footer__bottom">
         <p class="footer__text">Można Inaczej &copy; <span class="footer__year"></span> designed by Maciej Pawlica
         </p>
     </div>
 </footer>
+    <!--MY SCRIPTS-->
+    <script src="../dist/js/carousel.min.js"></script>
     <script src="./dist/js/main.min.js"></script>
-
 </body>
 
 </html>

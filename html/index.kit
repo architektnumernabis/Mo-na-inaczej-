@@ -16,10 +16,14 @@
     <!-- @include 'styles.kit' -->
 </head>
 
-<body>
+<body class="main-page">
+
+    <!--NAVIGATION-->
     <!-- @include 'nav-mobile.kit' -->
     <!-- @include 'nav-desktop.kit' -->
-    <header class="header">
+
+    <!--HEADER-->
+    <header class="header section" id="home">
         <div class="header__box wrapper">
             <h1 class="header__title title">można inaczej!</h1>
             <p class="header__text text">witam na stronie, na której prezentuję moje podejście do nauczania matematyki,
@@ -35,7 +39,7 @@
     <!--MAIN-->
     <main>
         <!--ABOUT ME-->
-        <section class="about-me wrapper" id="about-me">
+        <section class="about-me wrapper section" id="about-me">
             <div class="about-me__right">
                 <h2 class="about-me__title title">o mnie</h2>
                 <p class="about-me__text text">Jestem młodym, początkującym nauczycielem, który pragnie podzielić się z
@@ -58,25 +62,19 @@
         <section class="articles" id="articles">
             <div class="articles__carousel">
                 <div class="articles__carousel-item first">
-                    <h2 class="articles__title title">artykuł1</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">wartość bezwzględna</h2>
+                    <p class="articles__info text">W tym poście przedstawiam pomysł na lekcję wprowadzającą własności wartości bezwzględnej w drugiej klasie liceum.</p>
+                    <div class="articles__btn "><a class="button" href="../absolute.html">więcej</a></div>
                 </div>
                 <div class="articles__carousel-item second">
-                    <h2 class="articles__title title">artykuł2</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">pojęcie funkcji</h2>
+                    <p class="articles__info text">W tym poście prezentuję w jaki sposób wprowadzam pojęcie funkcji w pierwszej klasie liceum.</p>
+                    <div class="articles__btn "><a class="button" href="../function.html">więcej</a></div>
                 </div>
                 <div class="articles__carousel-item third">
-                    <h2 class="articles__title title">artykuł3</h2>
-                    <p class="articles__info text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
-                        nobis
-                        est praesentium, porro ab fuga dolore ipsa inventore natus rem?</p>
-                    <div class="articles__btn button">więcej</div>
+                    <h2 class="articles__title title">odkrywanie dowodów</h2>
+                    <p class="articles__info text">Lekcja poświęcona na odkrywanie w jaki sposób można udowodnić własności wartości bezwzględnej.</p>
+                    <div class="articles__btn "><a class="button" href="../proofs.html">więcej</a></div>
                 </div>
             </div>
             <div class="articles__controls">
@@ -89,11 +87,10 @@
         </section>
 
         <!--CONTACT-->
-        <section class="contact wrapper" id="contact">
+        <section class="contact wrapper section" id="contact">
             <div class="contact__left">
                 <h2 class="contact__title title">kontakt</h2>
-                <p class="contact__text text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti vel
-                    nihil hic quis. Ad error eligendi sapiente, itaque sunt nisi.</p>
+                <p class="contact__text text">Jeżeli masz jakiś pomysł na lekcję, którym chcesz się podzielić lub chcesz skomentować przeczytane na tej stronie wpisy to serdecznie zapraszam do kontaktu!</p>
                 <div class="contact__icons">
                     <a class="special-icon" href=""><i class="fa-brands fa-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -102,18 +99,19 @@
             </div>
             <div class="contact__right">
                 <div class="hero-gradient">
-                    <img class="image" src="./src/img/contact/contact.jpeg"
+                    <img class="image" src="./src/img/contact/contact.jpg"
                         alt="Zdjęcie przedstawia sieć połączeń neuronalnych">
                 </div>
             </div>
         </section>
-
     </main>
 
+    <!--FOOTER-->
     <!-- @include 'footer.kit' -->
 
+    <!--MY SCRIPTS-->
+    <script src="../dist/js/carousel.min.js"></script>
     <script src="./dist/js/main.min.js"></script>
-
 </body>
 
 </html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think different</title>
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/74154c4e60.js" crossorigin="anonymous"></script>
+    <!--MY STYLES-->
+    <link rel="stylesheet" href="./dist/css/hamburgers.min.css">
+<link rel="stylesheet" href="./dist/css/main.min.css"></head>
+
+<body class="main-page">
+
+    <!--NAVIGATION-->
+    <nav class="nav-mobile">
+    <button class="hamburger hamburger--spin" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <div class="nav-mobile__items">
+        <a href="../index.html#home" class="nav-mobile__item">home</a>
+        <a href="../index.html#about-me" class="nav-mobile__item">about me</a>
+        <a href="../allposts.html" class="nav-mobile__item">posts</a>
+        <a href="../index.html#contact" class="nav-mobile__item">contact</a>
+    </div>
+</nav>    <nav class="nav-desktop">
+    <div class="nav-desktop__box">
+        <a href="../index.html#home" class="nav-desktop__item ">home</a>
+        <a href="../index.html#about-me" class="nav-desktop__item">about me</a>
+        <a href="../allposts.html" class="nav-desktop__item">posts</a>
+        <a href="../index.html#contact" class="nav-desktop__item">contact</a>
+    </div>
+    <a href="#" class="nav-desktop__logo">
+         <i class="fa-brands fa-pied-piper-alt"></i>
+    </a>
+</nav>
+    <!--HEADER-->
+    <header class="header section" id="home">
+        <div class="header__box wrapper">
+            <h1 class="header__title title">think different!</h1>
+            <p class="header__text text">
+                wlecome on my page, in which I present my approach to teaching mathematics <br>
+                I want to show you that it is worth to think different!
+
+            </p>
+            <button class="header__button">
+                <a href="#about-me" class="header__btn button">read</a>
+            </button>
+        </div>
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <!--ABOUT ME-->
+        <section class="about-me wrapper section" id="about-me">
+            <div class="about-me__right">
+                <h2 class="about-me__title title">about me</h2>
+                <p class="about-me__text text">
+
+                    Hej! My name is Maciej and I am young, novice teacher who wants to share with other (not necessarily
+                    novice) teachers his ideas about fun (for students and for teacher!) high school mathematics
+                    lessons.
+                    Please enjoy reading my propositions and I especially encourage constructive criticism and sharing
+                    ideas!
+                </p>
+                <a href="#contact" class="about-me__btn button">contact me!</a>
+            </div>
+            <div class="about-me__left">
+                <div class="hero-gradient">
+                    <img class="image" src="./src/img/about-me/about-me.png"
+                        alt="Zdjęcie przedstawia Macieja Pawlicę, założyciela strony Można inaczej">
+                </div>
+            </div>
+        </section>
+
+        <!--ARTICLES-->
+        <section class="articles" id="articles">
+            <div class="articles__carousel">
+                <div class="articles__carousel-item first">
+                    <h2 class="articles__title title">absolute value</h2>
+                    <p class="articles__info text">In this post I present a way to discover properties of an absolute
+                        value.</p>
+                    <div class="articles__btn "><a class="button" href="../absolute.html">more</a></div>
+                </div>
+                <div class="articles__carousel-item second">
+                    <h2 class="articles__title title">function intro</h2>
+                    <p class="articles__info text">In this post I present a way to introduce function to students.</p>
+                    <div class="articles__btn "><a class="button" href="../function.html">more</a></div>
+                </div>
+                <div class="articles__carousel-item third">
+                    <h2 class="articles__title title">discovering proofs</h2>
+                    <p class="articles__info text">In this scenario I present my proposition how to help students
+                        discover proofs.</p>
+                    <div class="articles__btn "><a class="button" href="../proofs.html">more</a></div>
+                </div>
+            </div>
+            <div class="articles__controls">
+                <div class="articles__square square-active"></div>
+                <div class="articles__square"></div>
+                <div class="articles__square"></div>
+            </div>
+            <a class="articles__arrow right"><i class="fa-solid fa-chevron-right"></i></a>
+            <a class="articles__arrow left"><i class="fa-solid fa-chevron-left"></i></a>
+        </section>
+
+        <!--CONTACT-->
+        <section class="contact wrapper section" id="contact">
+            <div class="contact__left">
+                <h2 class="contact__title title">contact</h2>
+                <p class="contact__text text">If you have an idea  you want to share, or you have great
+                    lesson scenario you want to share, or you just simply want to ask, criticise, please feel free to contact me! </p>
+                <div class="contact__icons">
+                    <a class="special-icon" href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact__right">
+                <div class="hero-gradient">
+                    <img class="image" src="./src/img/contact/contact.jpg"
+                        alt="Zdjęcie przedstawia sieć połączeń neuronalnych">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+    <div class="footer__box wrapper">
+        <div class="footer__links">
+            <a href="../index.html" class="footer__link">home</a>
+            <a href="../index.html#about-me" class="footer__link">about me</a>
+            <a href="../allposts.html" class="footer__link">posts</a>
+            <a href="../index.html#contact" class="footer__link">contact</a>
+         
+        </div>
+        
+        <div class="footer__logo">
+           <!--  <i class="fa-brands fa-pied-piper-alt"></i>-->
+           <a class="footer__polish" href="/index.html">🇵🇱</a>
+           <a href="/eng/index.html">🇬🇧</a>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <p class="footer__text">Think Different &copy; <span class="footer__year"></span> designed by Maciej Pawlica
+        </p>
+    </div>
+</footer>
+    <!--MY SCRIPTS-->
+    <script src="../dist/js/carousel.min.js"></script>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
